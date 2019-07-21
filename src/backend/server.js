@@ -4,7 +4,7 @@ const http = require('http');
 const socketIo = require('socket.io');
 const mongoose = require('mongoose');
 const logger = require('morgan');
-let MessageModel = require('./MessageSchema');
+const MessageModel = require('./MessageSchema');
 
 const app = express();
 
