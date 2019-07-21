@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #cccccc;
+  padding: 20px;
+  /* padding-top: 150px; */
+  overflow: hidden;
+}
+
+.window {
+  overflow: auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border: 1px solid #adadad;
+  max-width: 500px;
+  max-height: 420px;
+  margin: 0 auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  background-color: #ebe9e9;
+}
+.window__bar {
+  background: radial-gradient(
+      7px at 14px 50%,
+      #ff5e57 0px,
+      #ff635a 5px,
+      #fd5249 6px,
+      rgba(255, 255, 255, 0) 7px
+    ),
+    radial-gradient(
+      7px at 34px 50%,
+      #ffbd2e 0px,
+      #ffc42f 5px,
+      #fcb91b 6px,
+      rgba(255, 255, 255, 0) 7px
+    ),
+    radial-gradient(
+      7px at 54px 50%,
+      #cfcfcf 0px,
+      #d3d3d3 5px,
+      #c6c6c6 6px,
+      rgba(255, 255, 255, 0) 7px
+    ),
+    linear-gradient(to top, #cccccc 0%, #d6d6d6 1px, #ebebeb 100%);
+}
+
+.window__bar {
+  position: fixed;
+  width: 498px;
+  border: 1px solid white;
+  border-left-color: #f3f3f3;
+  border-right-color: #f3f3f3;
+  border-bottom-color: #bdbdbd;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  height: 20px;
+  text-align: center;
+  color: #505151;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 20px;
+  vertical-align: middle;
+}
+
+.window__content {
+  padding-top: 10px;
+  min-height: 300px;
+  margin: 10px;
+}
+.window__content-frame {
+  display: block;
+  background: #cccccc;
+  width: 100%;
+  height: calc(100% - 20px);
+  position: relative;
+}
+.window__content-frame:before {
+  content: '';
+  display: block;
+  padding-top: calc(100% - 20px);
+}
+
+ul {
+  list-style: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.username {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 110px;
+  width: 60%;
+}
+
+.chatui {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+@media only screen and (max-width: 544px) {
+  .window__bar {
+    max-width: 458px;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  .window__bar {
+    max-width: 333px;
+  }
+
+  .username {
+    width: 90%;
+  }
+
+  .chatui {
+    margin-left: 40px;
+    width: 90%;
+  }
+}
